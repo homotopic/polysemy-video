@@ -1,0 +1,5 @@
+resolver: nightly-2020-09-28
+packages:
+- .
+extra-deps:
+- path-utils-0.1.1.0

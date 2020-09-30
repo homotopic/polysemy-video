@@ -1,0 +1,25 @@
+name:                polysemy-video
+version:             0.1.0.0
+git:                 "https://gitlab.com/homotopic-tech/polysemy-video"
+license:             MIT
+author:              "Daniel Firth"
+maintainer:          "dan.firth@homotopic.tech"
+copyright:           "2020 Daniel Firth"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Experimental video processing DSL for polysemy.
+
+dependencies:
+- base >= 4.7 && < 5
+- formatting
+- path
+- path-utils
+- polysemy
+- text
+- turtle
+
+library:
+  source-dirs: src
