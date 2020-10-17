@@ -41,9 +41,9 @@ data Range = Range
 
 -- |
 data ClipProcess m a where
-  ExtractAudio  :: Path Rel File -> [(Range, Path Rel File)] -> ClipProcess m ()
-  ExtractClips  :: Path Rel File -> [(Range, Path Rel File)] -> ClipProcess m ()
-  ExtractFrames :: Path Rel File -> [(Time, Path Rel File)]  -> ClipProcess m ()
+  ExtractAudio  :: Path b File -> [(Range, Path b' File)] -> ClipProcess m ()
+  ExtractClips  :: Path b File -> [(Range, Path b' File)] -> ClipProcess m ()
+  ExtractFrames :: Path b File -> [(Time, Path b' File)]  -> ClipProcess m ()
 
 makeSem ''ClipProcess
 
@@ -56,15 +56,15 @@ seekFF :: Time -> [Text]
 seekFF t = ["-ss", timeFF t]
 
 -- | "-ss <x> -to <y> <output>".
-rangeFF :: Range -> Path Rel File -> [Text]
+rangeFF :: Range -> Path b File -> [Text]
 rangeFF (Range f t) x = seekFF f ++ ["-to", timeFF t, toFilePathText x]
 
 -- | "-ss <x> -vframes 1 <output>"
-frameFF :: Time -> Path Rel File -> [Text]
+frameFF :: Time -> Path b File -> [Text]
 frameFF t x = seekFF t ++ ["-vframes", "1", toFilePathText x]
 
 -- | "-i <output>"
-inputFF :: Path Rel File -> [Text]
+inputFF :: Path b File -> [Text]
 inputFF x = ["-i", toFilePathText x]
 
 -- | "ffmpeg -y" followed by some arguments.
