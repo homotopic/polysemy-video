@@ -69,7 +69,7 @@ inputFF x = ["-i", toFilePathText x]
 
 -- | "ffmpeg -y" followed by some arguments.
 runffmpeg :: MonadIO m => [Text] -> m ()
-runffmpeg xs = S.sh $ S.inproc "ffmpeg" ("-y" : xs) mempty
+runffmpeg xs = S.sh $ S.inproc "ffmpeg" ("-y" : "-loglevel" : "warning" : xs) mempty
 
 -- | "mkdir -p" with a `Path b Dir`.
 mktreeFP :: MonadIO m => Path b Dir -> m ()
