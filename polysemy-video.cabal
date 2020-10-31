@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           polysemy-video
-version:        0.1.1.0
+version:        0.1.2.0
 description:    Experimental video processing DSL for polysemy.
 category:       video polysemy
 author:         Daniel Firth
