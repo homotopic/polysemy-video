@@ -1,8 +1,7 @@
-resolver: nightly-2020-09-28
+resolver: nightly-2021-07-16
 packages:
 - .
-extra-deps:
-- path-utils-0.1.1.0
+extra-deps: []
 nix:
   enable: false
   packages: [zlib]
