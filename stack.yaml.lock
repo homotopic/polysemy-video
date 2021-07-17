@@ -3,7 +3,28 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: simple-media-timestamp-0.2.0.0@sha256:f18dcbc62af2678ab09baae27d15aa873e00d412ec4640654a859cda226e40f3,799
+    pantry-tree:
+      size: 280
+      sha256: 8baa7f9878c4ed2ce25b6350d416cdc378f5749061bfc7bd863cb834c7552144
+  original:
+    hackage: simple-media-timestamp-0.2.0.0
+- completed:
+    hackage: simple-media-timestamp-formatting-0.1.0.0@sha256:fa9f87370e4b56e18be6999769ec61fb86e23f1ebf8ae05953e78e9e1883568a,1053
+    pantry-tree:
+      size: 304
+      sha256: d493bea5c6955b8e9335bb2a6d03997ed7c2bce09020f2cf33a521e042f5ac64
+  original:
+    hackage: simple-media-timestamp-formatting-0.1.0.0
+- completed:
+    hackage: path-formatting-0.1.0.0@sha256:81fe2745230e1d9687ecdf6baecd83379e3f363e872c0a7ee763ad909f63c59d,865
+    pantry-tree:
+      size: 272
+      sha256: 4141feb16b528978222547baaf47ec0181cee912e7cf2ab2b6c0b65d0df1517b
+  original:
+    hackage: path-formatting-0.1.0.0
 snapshots:
 - completed:
     size: 556829

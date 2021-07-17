@@ -1,7 +1,10 @@
 resolver: nightly-2021-07-16
 packages:
 - .
-extra-deps: []
+extra-deps:
+- simple-media-timestamp-0.2.0.0
+- simple-media-timestamp-formatting-0.1.0.0
+- path-formatting-0.1.0.0
 nix:
   enable: false
   packages: [zlib]
